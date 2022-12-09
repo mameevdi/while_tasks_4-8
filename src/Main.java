@@ -77,8 +77,10 @@ public class Main {
             }
             if ((year>currentYear)&(year<=currentYear+100)){
                 System.out.println("После " + currentYear + " года комета появится ещё в " + year + " году");
+                }
             }
         }
 
     }
+
 }
