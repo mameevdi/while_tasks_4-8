@@ -10,11 +10,12 @@ public class Main {
     }
     public static void task4() {
         System.out.println("Задача 4"); // сколько месяцев нужно чтобы накопить 12_000_000 рублей, если к накоплению прибавляется ещё 7% в месяц
-        int monthlyPayment = 15_000+15000*7/100;
-        int total = 0;
+        int monthlyPayment = 15_000;
+        double percent = 0.07;
+        double total = 0;
         int month = 0;
         while (total < 12_000_000) {
-            total = total + monthlyPayment + total*7/100;
+            total = total + monthlyPayment + total*percent;
             month++;
             System.out.println("В " + month + "-м месяце накопленно " + total + " рублей");
         }
@@ -23,11 +24,12 @@ public class Main {
     }
     public static void task5() {
         System.out.println("Задача 5"); // Сделать вывод каждого 6-го месяца
-        int monthlyPayment = 15_000+15000*7/100;
-        int total = 0;
+        int monthlyPayment = 15_000;
+        double percent = 0.07;
+        double total = 0;
         int month = 0;
         while (total < 12_000_000) {
-            total = total + monthlyPayment + total*7/100;
+            total = total + monthlyPayment + total*percent;
             month++;
             if (month % 6 == 0){
                 System.out.println("В " + month + "-м месяце накопленно " + total + " рублей");
@@ -39,13 +41,14 @@ public class Main {
     }
     public static void task6() {
         System.out.println("Задача 6"); //Какой будет сумма накоплений каждые полгода на протяжении 9 лет
-        int monthlyPayment = 15_000 + 15000 * 7 / 100;
-        int total = 0;
+        var monthlyPayment = 15_000;
+        double percent=0.07;
+        double total = 0;
         int month = 0;
         var totalMonth = 0;
         while (month < 9 * 12) {
             month++;
-            total = total + monthlyPayment + total * 7 / 100;
+            total = total + monthlyPayment + total * percent;
             totalMonth = month;
             if (totalMonth % 6 == 0) {
                 System.out.println("В " + totalMonth + "-м месяце накопленно " + total + " рублей");
@@ -77,10 +80,8 @@ public class Main {
             }
             if ((year>currentYear)&(year<=currentYear+100)){
                 System.out.println("После " + currentYear + " года комета появится ещё в " + year + " году");
-                }
             }
         }
-
     }
 
 }
